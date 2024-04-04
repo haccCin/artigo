@@ -21,11 +21,12 @@ if inp == 1
     estPe{3,1} = [0.121 0.221];
 end
 if inp == 2
-    estPe{1,1} = [0.386 0.486];
-    estPe{2,1} = [0.120 0.220];
-    estPe{3,1} = [0.344 0.444];
+    estPe{1,1} = [0.15 0.25];
+    estPe{2,1} = [0.45 0.55];
+    estPe{3,1} = [0.15 0.25];
+    estPe{4,1} = [0.05 0.15];
 end
-for col=1:3
+for col=1:4
     carac = int2str(col);
     carac2 = strcat('sem_col_',carac);
     mkdir(carac2);

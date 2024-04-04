@@ -16,7 +16,7 @@ function  mainRaInt(col, estPe, opNor, inp )
 
 % escolha dos percentuais a serem usados. 
 if inp == 2
-    perce = [0.436 0.17 0.394];
+    perce = [0.2 0.5 0.2 0.1];
 end
 
 if inp == 1
@@ -26,7 +26,7 @@ end
 % copias de arquivos e carregamentos dos dados. 
 copyfile('normali.m', 'otimi');
 cd otimi;
-load daGer.mat;
+load dados.mat;
 
 % escolha dos dados a serem usados. 
 if inp == 1
@@ -34,7 +34,7 @@ if inp == 1
 end
 
 if inp == 2
-    val = daGer{2,1}(:,1:3);
+    val = dados(:,2:5);
 end
 
 %opção para normalizar os dados. 
@@ -61,6 +61,13 @@ tamNewDat = size(valNor);
 for g = 2 : tamNewDat(1,2)
         valNor(:,g) = valNor(:,g) * perce(1,g-1);
 end
+
+%cd ..;
+%cd ..;
+%cd pre_processamento;
+%[valNor, valTot] = main(valNor);
+ 
+
 for i = 33:1:33
     str = int2str(i);
     str2 = strcat('../fol_',str);
