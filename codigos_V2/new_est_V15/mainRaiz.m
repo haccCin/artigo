@@ -41,7 +41,7 @@ for col=1:4
     cd ..;
     copyfile('../mainRaInt.m');
     copyfile('../normali.m');
-    mainRaInt(col, estPe{col,1}, 1, inp);
+    mainRaInt(col, estPe{col,1}, 1, inp, carac2);
     cd ..;
 end
 end

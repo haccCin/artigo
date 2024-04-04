@@ -1,4 +1,4 @@
-function  mainRaInt(col, estPe, opNor, inp )
+function  mainRaInt(col, estPe, opNor, inp, carac2 )
 
 %MAIN Summary of this function goes here
 %   Detailed explanation goes here
@@ -62,11 +62,14 @@ for g = 2 : tamNewDat(1,2)
         valNor(:,g) = valNor(:,g) * perce(1,g-1);
 end
 
-%cd ..;
-%cd ..;
-%cd pre_processamento;
-%[valNor, valTot] = main(valNor);
- 
+cd ..;
+cd ..;
+cd pre_processamento;
+[valNor, valTot] = main(valNor);
+cd ..;
+cd (carac2);
+cd otimi;
+  
 
 for i = 33:1:33
     str = int2str(i);
