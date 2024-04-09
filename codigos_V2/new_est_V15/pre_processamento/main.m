@@ -9,7 +9,7 @@ function [dat_process, espec_tot]  = main(dados)
 
 
 % os dados serão utilizados com os percentuais aplicados
-dat_process_noise  = bib_mul(dados(:, (2:end)), [0.2 0.5 0.2 0.1]);
+dat_process_noise  = bib_mul(dados(:, (2:end)), [1 1 1 1]);
 dat_process_temp = smoothdata(dat_process_noise(:,2:end),1);
 dat_process = [dat_process_noise(:,1) dat_process_temp(:,1:end)];
 
